@@ -19,5 +19,25 @@
         </tr>
         <% end %>
     </table>
+    <h3>Produto com desconto</h3>
+    <table>
+      <thead>
+        <tr>
+          <td>Nome</td>
+          <td>Descrição</td>
+          <td>Preço</td>
+          <td>Quantidade</td>
+        </tr>
+      </thead>
+      <% todos = Produto.all %>
+      <% @produtos_com_desconto.each do |produto| %>
+        <tr>
+          <td><%= produto.nome %></td>
+          <td><%= produto.descricao%></td>
+          <td><%= produto.preco %></td>
+          <td><%= produto.quantidade %></td>
+        </tr>
+        <% end %>
+    </table>
   </body>
 </html>
