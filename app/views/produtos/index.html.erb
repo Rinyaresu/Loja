@@ -9,7 +9,7 @@
           <td>Quantidade</td>
         </tr>
       </thead>
-      <% todos = Produto.all %>
+      <tbody>
       <% @produtos.each do |produto| %>
         <tr>
           <td><%= produto.nome %></td>
@@ -17,8 +17,10 @@
           <td><%= produto.preco %></td>
           <td><%= produto.quantidade %></td>
         </tr>
+      </tbody>
         <% end %>
     </table>
+    
     <h3>Produto com desconto</h3>
     <table>
       <thead>
@@ -29,7 +31,7 @@
           <td>Quantidade</td>
         </tr>
       </thead>
-      <% todos = Produto.all %>
+      <tbody>
       <% @produtos_com_desconto.each do |produto| %>
         <tr>
           <td><%= produto.nome %></td>
@@ -38,6 +40,7 @@
           <td><%= produto.quantidade %></td>
         </tr>
         <% end %>
+      </tbody>
     </table>
   </body>
 </html>
